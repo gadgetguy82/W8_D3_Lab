@@ -2,10 +2,10 @@
     <div>
         <form v-on:submit="addGuest">
             <label for="name"> Name: </label>
-            <input type="text" id="name" placeholder="Guest name" v-model="name">
+            <input type="text" id="name" placeholder="Guest name" v-model="name" required>
             <br>
             <label for="email"> Email: </label>
-            <input type="email" id="email" placeholder="Guest email" v-model="email">
+            <input type="email" id="email" placeholder="Guest email" v-model="email" required>
             <br>
             <label for="checked_in"> Checked in:</label>
             <input type="checkbox" id="checked_in" v-model="checked_in">
