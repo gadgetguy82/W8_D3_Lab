@@ -24,7 +24,11 @@
         eventBus.$on('booking-deleted', (id) => {
             const booking_id = this.bookings.findIndex(booking => booking._id === id);
             this.bookings.splice(booking_id, 1)
-        })
+        });
+        eventBus.$on('booking-updated', (newBooking) => {
+            const index = this.bookings.findIndex(booking => booking._id === newBooking._id);
+            this.bookings[index] = newBooking;
+        });
 
     },
   components: {
